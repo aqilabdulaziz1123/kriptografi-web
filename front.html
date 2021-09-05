@@ -1,0 +1,51 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+<head>
+    
+</head>
+<body>
+    <div class="title">
+        Tugas Kriptografi
+    </div>
+    <div class="navbar">
+        <div class="navbut">
+            <input type="Hidden" id="choice" value="v">
+            <button onclick="affine()"> Affine </button>
+            <button onclick="playfair()"> Playfair </button>
+            <button onclick="vigenere()"> Vigenere </button>
+            <button onclick="fvigenere()"> Full Vigenere </button>
+            <button onclick="evigenere()"> Extended Vigenere </button>
+            <button onclick="akvigenere()"> Auto-Key Vigenere </button>
+        </div>
+        <div id="choicet">
+            Current choice is Affine algorithm
+        </div>
+    </div>
+    <div class="inputArea">
+        <div class="teksInput">
+            <div class=tekses>
+                <input type="hidden" id="filename" value="">
+                Plainteks : <textarea id="plainteks"></textarea>
+                <input type="hidden" id="plaintekshidden">
+                Key : <input id="key">
+                <div id="label">
+
+                </div>
+                <input id="matriks" type=text hidden=true >
+                <div class ="buttons">
+                    <button onclick="encrypt()"> Encrypt </button> 
+                    <button onclick="decrypt()"> Decyprt </button>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="file" id="upF" name="filename" onchange="fileUpload()">
+            </div>
+        </div>
+    </div>
+    <div class="resultArea">
+        <div class="ciphertext" id="result"> U will see result here! </div>
+        <div class="collat" id="collat"> U will see additional info here! </div>
+    </div>
+</body>
+</html>
